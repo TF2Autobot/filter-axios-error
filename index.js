@@ -9,6 +9,6 @@ export default function filterAxiosError(err) {
     return {
         message: err.message,
         status: err.response.status,
-        data: err.data
+        data: err.response.data
     };
 }
