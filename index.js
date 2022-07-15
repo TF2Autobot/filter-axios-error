@@ -6,9 +6,9 @@
  */
 
 export default function filterAxiosError(err) {
-    const e = new Error(err.message);
-    e['status'] = err.response.status;
-    e['data'] = err.data;
-
-    return e;
+    return {
+        message: err.message,
+        status: err.response.status,
+        data: err.data
+    };
 }

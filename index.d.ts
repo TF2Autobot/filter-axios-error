@@ -1,6 +1,7 @@
 import { AxiosError } from 'axios';
 
-export interface ErrorFiltered extends Error {
+export interface ErrorFiltered {
+    message: string;
     status: number;
     data: Record<string, any>;
 }
