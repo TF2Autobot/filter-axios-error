@@ -1,5 +1,10 @@
 import { AxiosError } from 'axios';
 
-declare function filterAxiosError(err: AxiosError): Error;
+export interface ErrorFiltered extends Error {
+    status: number;
+    data: Record<string, any>;
+}
+
+declare function filterAxiosError(err: AxiosError): ErrorFiltered;
 
 export default filterAxiosError;
