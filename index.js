@@ -6,9 +6,15 @@
  */
 
 export default function filterAxiosError(err) {
-    return {
+    const e = {
         message: err.message,
-        status: err.response?.status ?? err.status,
-        data: err.response?.data
+        status: err.response?.status ?? err.status
     };
+
+    if (typeof err.data === 'string' && err.data.includes('<html>')) {
+        return e;
+    }
+
+    e['data'] = err.response?.data;
+    return e;
 }
