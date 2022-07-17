@@ -11,7 +11,7 @@ export default function filterAxiosError(err) {
         status: err.response?.status ?? err.status
     };
 
-    if (typeof err.data === 'string' && err.data.includes('<html>')) {
+    if (typeof err.response?.data === 'string' && err.response?.data.includes('<html>')) {
         return e;
     }
 
