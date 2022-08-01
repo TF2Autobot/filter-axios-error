@@ -8,7 +8,10 @@
 export default function filterAxiosError(err) {
     const e = {
         message: err.message,
-        status: err.response?.status ?? err.status
+        code: err.code,
+        status: err.response?.status ?? err.status,
+        method: err.config?.method ?? err.method,
+        url: err.config?.url?.replace(/\?.+/, '') ?? err.baseURL?.replace(/\?./)
     };
 
     if (typeof err.response?.data === 'string' && err.response?.data.includes('<html>')) {

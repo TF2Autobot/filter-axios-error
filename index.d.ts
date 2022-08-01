@@ -2,7 +2,9 @@ import { AxiosError } from 'axios';
 
 export interface ErrorFiltered {
     message: string;
-    status: number | string;
+    code?: string;
+    status?: number | string;
+    method?: string;
     data?: Record<string, any> | string;
 }
 
