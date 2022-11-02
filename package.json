@@ -1,6 +1,6 @@
 {
   "name": "@tf2autobot/filter-axios-error",
-  "version": "1.5.0",
+  "version": "1.5.1",
   "description": "Return simple error consist of only message, status, and data.",
   "main": "index.cjs.js",
   "module": "index.js",
