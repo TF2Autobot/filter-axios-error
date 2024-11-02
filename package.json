@@ -26,6 +26,6 @@
   "homepage": "https://github.com/TF2Autobot/filter-axios-error#readme",
   "devDependencies": {
     "axios": "^1.7.7",
-    "rollup": "^2.77.0"
+    "rollup": "^2.79.2"
   }
 }
